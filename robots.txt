@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jpquinn09.github.io/kairos-site/sitemap.xml

@@ -67,12 +67,43 @@ not give us access to your Gmail, Drive, contacts, or anything else, and we do n
 <p>We use your email address solely to identify your account and to send account-related messages such as
 confirmation and password resets. We do not send marketing email.</p>
 
+<h2>Crash reports and usage data</h2>
+<p>The app sends two kinds of technical data, and it is worth being exact about
+what each one can and cannot contain.</p>
+
+<p><strong>Crash reports.</strong> When the app crashes, we receive the technical
+details of the failure — which screen, which version of the app and operating
+system, and the programming error itself. This is how we find out something is
+broken for people who would otherwise just delete the app.</p>
+
+<p><strong>Usage events.</strong> We record that certain things happened: an
+exercise was started, an exercise was completed, an urge was logged, the quiz
+was finished. This tells us where the app is confusing or where people give up,
+which is the only way to improve it without guessing.</p>
+
+<div class="card">
+<strong>What these can never contain.</strong> Usage events record that something
+happened, never what it was about. They cannot carry which OCD themes you
+matched, the text of anything you wrote, your distress ratings, the names of
+exercises you did, or your email address. This is enforced in the code by a
+fixed list of permitted events and properties — anything outside it is refused
+and the event is discarded, rather than sent with the sensitive part removed.
+</div>
+
+<p>Durations are rounded to the nearest 30 seconds rather than recorded exactly,
+because a precise timing is closer to an identifier than it looks.</p>
+
+<p>Crash reports go to Sentry and usage events to PostHog, both acting as our
+processors. If you would rather send neither, you can turn both off in the app
+under Profile, and the app works exactly the same without them.</p>
+
 <h2>What we never do</h2>
 <ul>
 <li>We do not sell or rent your data. Ever.</li>
 <li>We do not share it with advertisers, data brokers, insurers, or employers.</li>
 <li>We do not use it to train machine-learning models.</li>
-<li>We do not run analytics, crash-reporting, or attribution SDKs. There are no third-party trackers in the app.</li>
+<li>We do not use your exercise content, predictions, urge notes, distress ratings, or matched themes for anything other than showing them back to you.</li>
+<li>We do not run advertising or attribution SDKs. Nothing here feeds an ad network.</li>
 <li>We do not build a profile of you or attempt to identify you beyond your account.</li>
 </ul>
 

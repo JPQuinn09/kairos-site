@@ -22,12 +22,12 @@
 <nav><a href="index.html">Kairos</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 16 September 2026</p>
+<p class="updated">Last updated: 4 October 2026</p>
 
 <p class="lede">Kairos is a self-guided ERP (Exposure and Response Prevention) companion for OCD.
 What you record in it is about your own mental health, so the short version matters:
-your data stays on your device unless you choose to create an account, and it is never
-sold, shared, or used to advertise to you.</p>
+what you write is stored on your device and in your own account, read by nobody
+else, and never sold, shared, or used to advertise to you.</p>
 
 <div class="card">
 <strong>The short version</strong>
@@ -35,7 +35,7 @@ sold, shared, or used to advertise to you.</p>
 <li>Kairos requires an account. Your exercise history, urge logs and quiz result are stored on your device and backed up to your account so they survive a change of phone.</li>
 <li>There is no advertising, no ad trackers, and nothing is ever sold. The app does send crash reports and a small set of usage events — described in full below — and you can turn both off in Profile.</li>
 <li>If you sign in, your data syncs privately to your own account so it follows you across your devices.</li>
-<li>You can export everything, and deleting the app deletes the local copy.</li>
+<li>You can export everything, delete your account from inside the app, and deleting the app removes the local copy.</li>
 </ul>
 </div>
 
@@ -52,16 +52,16 @@ sold, shared, or used to advertise to you.</p>
 photos, or health data from other apps. It does not access your camera, microphone, or HealthKit.</p>
 
 <h2>Where it is stored</h2>
-<p><strong>Without an account:</strong> everything is stored locally on your device only. It is not
-transmitted anywhere. We cannot see it, and we have no way to recover it if you delete the app.</p>
-<p><strong>With an account:</strong> the records listed above are also stored in our database so they
-can sync to your other devices. Each row is bound to your account and protected by row-level security,
-so no other user can read your data. The database is operated by
+<p><strong>On your device.</strong> Everything you enter is written to your phone first, and the app
+works offline. Deleting the app removes that copy.</p>
+<p><strong>In your account.</strong> Kairos requires an account, so the records listed above are also
+stored in our database and sync to your other devices. Each row is bound to your account and protected
+by row-level security, so no other user can read your data. The database is operated by
 <a href="https://supabase.com/privacy">Supabase</a>, who act as our data processor and host it in the
 European Union.</p>
 
 <h2>Accounts and sign-in</h2>
-<p>Creating an account is optional. You can sign in with an email address and password, or with Google.
+<p>Kairos requires an account. It is what lets your history survive a lost or replaced phone, and it is the boundary that keeps your records yours. You can sign in with an email address and password, or with Google.
 If you use Google sign-in we receive only your email address and basic profile information — Google does
 not give us access to your Gmail, Drive, contacts, or anything else, and we do not request it.</p>
 <p>We use your email address solely to identify your account and to send account-related messages such as
@@ -97,6 +97,47 @@ because a precise timing is closer to an identifier than it looks.</p>
 processors. If you would rather send neither, you can turn both off in the app
 under Profile, and the app works exactly the same without them.</p>
 
+<h2>Why we are allowed to hold this</h2>
+<p>Information about your mental health is <em>special category</em> data under the UK GDPR, which means
+it needs a stronger justification than ordinary personal data. Being specific about that matters more
+than a general promise to be careful.</p>
+<div class="tablewrap"><table>
+<tr><th>What</th><th>Why we process it</th><th>Our basis</th></tr>
+<tr>
+  <td>Your account email and password</td>
+  <td>To create your account, sign you in, and send password resets</td>
+  <td>Necessary to provide the service you asked for (contract)</td>
+</tr>
+<tr>
+  <td>Quiz results, exercise logs, urge logs, exposures you write</td>
+  <td>To show your own history back to you and sync it between your devices. Nobody else reads it.</td>
+  <td>Your explicit consent, given by choosing to use the app and enter it</td>
+</tr>
+<tr>
+  <td>Crash reports</td>
+  <td>To find out the app is broken for people who would otherwise just delete it</td>
+  <td>Our legitimate interest in the app working, and you can turn it off</td>
+</tr>
+<tr>
+  <td>Usage events</td>
+  <td>To see where the app is confusing or where people give up</td>
+  <td>Our legitimate interest in improving it, and you can turn it off</td>
+</tr>
+</table></div>
+<p>You can withdraw consent at any time by deleting your account, which removes the records rather than
+hiding them. Turning off crash reports and usage data in Profile stops those immediately.</p>
+
+<h2>Where your data goes</h2>
+<p>We use three processors. All three store this data in the European Union, so it does not leave the
+UK/EU for these purposes.</p>
+<div class="tablewrap"><table>
+<tr><th>Who</th><th>What for</th><th>What they get</th><th>Where</th></tr>
+<tr><td><a href="https://supabase.com/privacy">Supabase</a></td><td>Account and sync</td><td>Your email and the records above</td><td>EU</td></tr>
+<tr><td><a href="https://sentry.io/privacy/">Sentry</a></td><td>Crash reports</td><td>Device model, OS, app version, the error itself, and an app install identifier. Not your name, email or IP.</td><td>EU</td></tr>
+<tr><td><a href="https://posthog.com/privacy">PostHog</a></td><td>Usage events</td><td>That an event happened, a rounded duration, device model. No content, no location.</td><td>EU</td></tr>
+</table></div>
+<p>If you sign in with Google, Google processes that sign-in under its own policy.</p>
+
 <h2>What we never do</h2>
 <ul>
 <li>We do not sell or rent your data. Ever.</li>
@@ -121,7 +162,7 @@ organisations anything about you, and we are not told that you tapped anything.<
 <ul>
 <li><strong>Export</strong> — Profile → Export your data gives you everything Kairos holds, as readable JSON.</li>
 <li><strong>Delete locally</strong> — deleting the app removes the local copy from your device.</li>
-<li><strong>Delete your account</strong> — email us and we will delete your account and all synced data. Records are removed, not merely deactivated.</li>
+<li><strong>Delete your account</strong> — Profile → Delete your account. This removes your account and every record attached to it, from this device and from our database. Records are deleted, not deactivated, and we cannot recover them afterwards. You can also email us and we will do it for you.</li>
 <li><strong>Access and correction</strong> — you can view and edit your entries in the app at any time.</li>
 </ul>
 <p>If you are in the UK or EU, the UK GDPR and GDPR give you rights of access, rectification, erasure,
@@ -149,5 +190,5 @@ It does not diagnose or treat OCD. If you are in crisis, contact emergency servi
 911 in the US — or a helpline listed in the app's Crisis Support screen.
 </div>
 
-<footer>Kairos · Privacy Policy · Last updated 16 September 2026</footer>
+<footer>Kairos · Privacy Policy · Last updated 4 October 2026</footer>
 </div></body></html>

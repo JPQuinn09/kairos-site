@@ -22,7 +22,7 @@
 <nav><a href="index.html">Kairos</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 4 October 2026</p>
+<p class="updated">Last updated: 6 October 2026</p>
 
 <p class="lede">Kairos is a self-guided ERP (Exposure and Response Prevention) companion for OCD.
 What you record in it is about your own mental health, so the short version matters:
@@ -43,10 +43,11 @@ else, and never sold, shared, or used to advertise to you.</p>
 <p>Kairos records only what you enter:</p>
 <ul>
 <li><strong>Quiz results</strong> — which OCD patterns your answers matched.</li>
-<li><strong>Exercise logs</strong> — which exposure you did, your distress rating before and after, how long it lasted, and any mid-session ratings you chose to log.</li>
+<li><strong>Exercise logs</strong> — which exposure you did, your distress rating before and after, how long it lasted, any mid-session ratings you chose to log, what you predicted would happen and whether it did, and whether you did anything to make the exposure feel safer.</li>
 <li><strong>Exposures you write yourself</strong> — the title, description, and the response-prevention notes you add.</li>
 <li><strong>Urge logs</strong> — intensity, what happened, an optional pattern, and an optional note.</li>
-<li><strong>Preferences</strong> — such as light or dark appearance.</li>
+<li><strong>Safety screening answers</strong> — your answers to the short set of questions asked before the quiz, including whether you are having thoughts of harming yourself. These are kept <strong>on your device only</strong>. They are never uploaded, never synced to your account, and never included in an export.</li>
+<li><strong>Settings</strong> — light or dark appearance, whether the app lock is on, the times of any reminders or check-ins you have set, and your choices about crash reports and usage data. These are kept <strong>on your device only</strong>.</li>
 </ul>
 <p>Kairos does not ask for your name, date of birth, address, phone number, location, contacts,
 photos, or health data from other apps. It does not access your camera, microphone, or HealthKit.</p>
@@ -59,6 +60,9 @@ stored in our database and sync to your other devices. Each row is bound to your
 by row-level security, so no other user can read your data. The database is operated by
 <a href="https://supabase.com/privacy">Supabase</a>, who act as our data processor and host it in the
 European Union.</p>
+<p><strong>On your device only.</strong> Your safety screening answers and your settings never leave your
+phone. Because they are not in your account, they do not follow you to a new phone, and deleting the app
+removes them.</p>
 
 <h2>Accounts and sign-in</h2>
 <p>Kairos requires an account. It is what lets your history survive a lost or replaced phone, and it is the boundary that keeps your records yours. You can sign in with an email address and password, or with Google.
@@ -153,9 +157,42 @@ UK/EU for these purposes.</p>
 </ul>
 
 <h2>Notifications</h2>
-<p>If you allow notifications, Kairos sends one only while an exposure timer is running, so you can find
-your way back to it. It contains the exercise title. There are no promotional, streak, or re-engagement
-notifications, and you can decline or revoke the permission at any time in iOS Settings.</p>
+<p>Every notification Kairos shows is created by the app on your own phone. We do not send them from a
+server, we are not told when one is shown or tapped, and we do not hold a push-notification address for
+your device. There are three kinds, and the second and third exist only if you switch them on.</p>
+<ul>
+<li><strong>Exercise in progress</strong> — shown while an exposure timer is running, so you can find
+your way back to it. It contains the title of the exercise.</li>
+<li><strong>Daily practice reminder</strong> — off unless you turn it on in Profile. One notification a
+day, reading “Time to practise”.</li>
+<li><strong>Check-ins through the day</strong> — off unless you add one in Profile. Up to three a day, at
+times you choose. Each reads “Checking in — Tap if there is something to note”, and tapping it opens the
+urge log. The wording is deliberately bare: it does not mention OCD, urges or what the app is for,
+because a notification can be read by whoever is near your phone.</li>
+</ul>
+<p>The times you choose are held only in your phone's own notification schedule. They are not stored in
+your account or sent to us. Removing a check-in, turning the reminder off, signing out, or deleting your
+account cancels them.</p>
+<p>If you have turned usage data on, switching the daily practice reminder on or off is recorded as an
+event, with no time attached. Check-ins are not recorded at all.</p>
+<p>There are no promotional or streak notifications. You can decline or revoke notification permission at
+any time in your phone's Settings, and the rest of the app works without it.</p>
+
+<h2>App lock</h2>
+<p>You can ask Kairos to require Face ID, Touch ID or your phone's passcode each time it opens. This is
+off unless you turn it on. The check is carried out by your phone, not by Kairos: the app is told only
+whether it succeeded. Your face, fingerprint and passcode never reach the app or us. Whether the lock is
+on is stored on your device only. The crisis screen stays reachable without unlocking.</p>
+
+<h2>Home-screen widgets and the lock screen</h2>
+<p>Kairos offers optional home-screen widgets, and on iPhone a live timer on the lock screen while an
+exercise is running. If you add them, they show the number of exercises you have completed this week and
+in total, a small trend line drawn from your starting distress ratings, and — while an exercise is
+running — its title and timer.</p>
+<p>To make this possible the app copies those few figures to a shared area on your phone that the widget
+can read. They do not leave your device. They are, however, <strong>visible to anyone who can see your
+home screen or lock screen</strong>, and an exercise title can say more than you might want it to. The
+widgets are entirely optional, and removing them removes the display.</p>
 
 <h2>Crisis resources</h2>
 <p>The crisis screen lists helplines and links to outside organisations. Tapping a phone number places a
@@ -164,8 +201,8 @@ organisations anything about you, and we are not told that you tapped anything.<
 
 <h2>Your control over your data</h2>
 <ul>
-<li><strong>Export</strong> — Profile → Export your data gives you everything Kairos holds, as readable JSON.</li>
-<li><strong>Delete locally</strong> — deleting the app removes the local copy from your device.</li>
+<li><strong>Export</strong> — Profile → Export your data gives you your quiz result, exercise logs, urge logs and the exposures you wrote, as readable JSON. It does not include your safety screening answers or your settings, which stay on your device.</li>
+<li><strong>Delete locally</strong> — deleting the app removes the local copy from your device, including your safety screening answers, your settings, and any reminders or check-ins.</li>
 <li><strong>Delete your account</strong> — Profile → Delete your account. This removes your account and every record attached to it, from this device and from our database. Records are deleted, not deactivated, and we cannot recover them afterwards. You can also email us and we will do it for you.</li>
 <li><strong>Access and correction</strong> — you can view and edit your entries in the app at any time.</li>
 </ul>
@@ -194,5 +231,5 @@ It does not diagnose or treat OCD. If you are in crisis, contact emergency servi
 911 in the US — or a helpline listed in the app's Crisis Support screen.
 </div>
 
-<footer>Kairos · Privacy Policy · Last updated 4 October 2026</footer>
+<footer>Kairos · Privacy Policy · Last updated 6 October 2026</footer>
 </div></body></html>

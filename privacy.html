@@ -47,8 +47,9 @@ else, and never sold, shared, or used to advertise to you.</p>
 <li><strong>Exposures you write yourself</strong> — the title, description, and the response-prevention notes you add.</li>
 <li><strong>Urge logs</strong> — intensity, what happened, an optional pattern or a trigger you name in your own words, and an optional note.</li>
 <li><strong>Safety screening answers</strong> — your answers to the short set of questions asked before the quiz, including whether you are having thoughts of harming yourself. These are kept <strong>on your device only</strong>. They are never uploaded, never synced to your account, and never included in an export.</li>
-<li><strong>Weekly notes</strong> — if you choose to add them: what a week was like (for example poor sleep, or more stress than usual) and an optional line of your own. These are kept <strong>on your device only</strong>. They are shown back to you beside what you logged that week; Kairos does not analyse them or draw conclusions from them.</li>
-<li><strong>Settings</strong> — light or dark appearance, the times of any reminders or check-ins you have set, and your choices about crash reports and usage data. These are kept <strong>on your device only</strong>.</li>
+<li><strong>Weekly notes</strong> — if you choose to add them: what a week was like (for example poor sleep, or more stress than usual) and an optional line of your own. These are stored on your device and in your account, like your other records. They are shown back to you beside what you logged that week; Kairos does not analyse them or draw conclusions from them.</li>
+<li><strong>Settings</strong> — light or dark appearance, and your choices about crash reports and usage data. These are kept <strong>on your device only</strong>.</li>
+<li><strong>Reminder times</strong> — whether the daily practice reminder is on, and the times of any check-ins you have set. These are kept with your account so they come back when you sign in again or change phone. Only the times are stored, nothing about what they are for.</li>
 </ul>
 <p>Kairos does not ask for your name, date of birth, address, phone number, location, contacts,
 photos, or health data from other apps. It does not access your camera, microphone, or HealthKit.</p>
@@ -61,7 +62,7 @@ stored in our database and sync to your other devices. Each row is bound to your
 by row-level security, so no other user can read your data. The database is operated by
 <a href="https://supabase.com/privacy">Supabase</a>, who act as our data processor and host it in the
 European Union.</p>
-<p><strong>On your device only.</strong> Your safety screening answers, your weekly notes and your settings never
+<p><strong>On your device only.</strong> Your safety screening answers and your settings never
 leave your phone. Because they are not in your account, they do not follow you to a new phone, and deleting the app
 removes them.</p>
 
@@ -75,9 +76,7 @@ reminders and check-ins, and clears the figures shown by any home-screen widgets
 <li><strong>If a different account signs in on the same phone</strong>, anything left from the previous
 account is removed before the new account is shown or synced. One person's records are never shown to,
 or copied into, another person's account.</li>
-<li><strong>When you sign back in</strong>, your records return from your account. Your safety screening
-answers and settings do not, because they were only ever kept on the phone; you will be asked the
-screening questions again.</li>
+<li><strong>When you sign back in</strong>, your records return from your account. So do your reminder times, if notifications are allowed on that phone. Your safety screening answers, your light or dark preference and your choices about crash reports and usage data do not, because they were only ever kept on the phone; you will be asked the screening questions again.</li>
 </ul>
 <p>If you sign out with no internet connection, entries made since the last sync cannot be uploaded first
 and are lost with the local copy. Crash reports and usage data stop when the phone changes hands, and the
@@ -132,7 +131,7 @@ than a general promise to be careful.</p>
   <td>Necessary to provide the service you asked for (contract)</td>
 </tr>
 <tr>
-  <td>Quiz results, exercise logs, urge logs, exposures you write</td>
+  <td>Quiz results, exercise logs, urge logs, exposures you write, weekly notes</td>
   <td>To show your own history back to you and sync it between your devices. Nobody else reads it.</td>
   <td>Your explicit consent, given by choosing to use the app and enter it</td>
 </tr>
@@ -155,13 +154,13 @@ the next launch.</p>
 rather than hiding them.</p>
 
 <h2>Where your data goes</h2>
-<p>We use three processors. All three store this data in the European Union, so it does not leave the
-UK/EU for these purposes.</p>
+<p>We use four processors. All four store or send this data from the European Union.</p>
 <div class="tablewrap"><table>
 <tr><th>Who</th><th>What for</th><th>What they get</th><th>Where</th></tr>
 <tr><td><a href="https://supabase.com/privacy">Supabase</a></td><td>Account and sync</td><td>Your email and the records above</td><td>EU</td></tr>
 <tr><td><a href="https://sentry.io/privacy/">Sentry</a></td><td>Crash reports</td><td>Device model, OS, app version, the error itself, and an app install identifier. Not your name, email or IP.</td><td>EU</td></tr>
 <tr><td><a href="https://posthog.com/privacy">PostHog</a></td><td>Usage events</td><td>That an event happened, a rounded duration, device model. No content, no location.</td><td>EU</td></tr>
+<tr><td><a href="https://resend.com/legal/privacy-policy">Resend</a></td><td>Sending account emails (confirmation, password reset)</td><td>Your email address and the message itself. None of your records.</td><td>EU (Ireland)</td></tr>
 </table></div>
 <p>If you sign in with Google, Google processes that sign-in under its own policy.</p>
 
@@ -189,9 +188,9 @@ times you choose. Each reads “Checking in — Tap if there is something to not
 urge log. The wording is deliberately bare: it does not mention OCD, urges or what the app is for,
 because a notification can be read by whoever is near your phone.</li>
 </ul>
-<p>The times you choose are held only in your phone's own notification schedule. They are not stored in
-your account or sent to us. Removing a check-in, turning the reminder off, signing out, or deleting your
-account cancels them.</p>
+<p>The notifications themselves are scheduled by your phone. The times you choose are also saved with
+your account, so they can be put back when you sign in again or move to a new phone. Removing a check-in,
+turning the reminder off, signing out, or deleting your account cancels them on the phone.</p>
 <p>If you have turned usage data on, switching the daily practice reminder on or off is recorded as an
 event, with no time attached. Check-ins are not recorded at all.</p>
 <p>There are no promotional or streak notifications. You can decline or revoke notification permission at

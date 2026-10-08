@@ -35,7 +35,7 @@
 <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 <label class="join-opt"><input type="checkbox" name="updates"> Also send me the occasional update while it's being built</label>
 <p class="join-msg" id="join-msg" role="status" aria-live="polite"></p>
-<p class="join-fine">A confirmation now and one email when it's out, then your address is deleted. Nothing else unless you tick the box. <a href="privacy.html#waitlist">How this is handled</a></p>
+<p class="join-fine">A confirmation now, one email when the release date is set and one when it's out, then your address is deleted. Nothing else unless you tick the box. <a href="privacy.html#waitlist">How this is handled</a></p>
 <noscript><p class="join-fine">This form needs JavaScript. You can email <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a> instead.</p></noscript>
 </form>
 <p class="cta"><a class="ghost" href="#how">How it works</a></p>
@@ -116,7 +116,7 @@ fetch(URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:KEY},
 });
 function done(updates){
 form.classList.add('done');
-say(updates?'You\'re on the list. A confirmation email is on its way. We\'ll email you when it\'s out, and now and then before.':'You\'re on the list. A confirmation email is on its way, then one more when it\'s out.');
+say(updates?'You\'re on the list. A confirmation email is on its way. We\'ll email you the release date, when it\'s out, and now and then before.':'You\'re on the list. A confirmation email is on its way. After that, just the release date and the launch.');
 }
 })();
 </script>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leave the waiting list — Kairos</title>
+<meta name="description" content="Remove your email address from the Kairos waiting list.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta name="theme-color" content="#5C8367">
+<link rel="stylesheet" href="/style.css?v=20261013"></head>
+<body><div class="wrap">
+<nav><a href="/">Kairos</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+
+<h1>Leave the waiting list</h1>
+<div id="ask">
+<p class="lede">This deletes your email address from the Kairos waiting list. You won't hear from us again.</p>
+<p><button class="btn" id="go" type="button">Remove my address</button></p>
+<p class="note" id="msg" role="status" aria-live="polite"></p>
+</div>
+<div id="gone" hidden>
+<p class="lede">Done. Your address has been deleted.</p>
+<p>If you change your mind, you can join again from the <a href="/">home page</a>.</p>
+</div>
+<noscript><p>This page needs JavaScript. Email <a href="mailto:kairosocd@proton.me?subject=Remove%20me">kairosocd@proton.me</a> and we will delete your address for you.</p></noscript>
+
+<footer>Kairos</footer>
+</div>
+<script>
+// Nothing happens on page load, only on the button: mail scanners open links
+// in emails, and that must not remove anyone.
+(function(){
+var URL='https://rinfsydefqgzggacbksc.supabase.co/rest/v1/rpc/leave_waitlist',KEY='sb_publishable_8s-21yNIAFTTwb9iOPqPbw_uM5XrwYM';
+var t=new URLSearchParams(location.search).get('t')||'',btn=document.getElementById('go'),msg=document.getElementById('msg');
+var help='Email kairosocd@proton.me and we will delete your address for you.';
+if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(t)){btn.hidden=true;msg.textContent='This link is incomplete. '+help;return}
+btn.addEventListener('click',function(){
+btn.disabled=true;msg.textContent='Removing…';
+fetch(URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:KEY},body:JSON.stringify({p_token:t})})
+.then(function(r){if(!r.ok)throw 0;document.getElementById('ask').hidden=true;document.getElementById('gone').hidden=false})
+.catch(function(){btn.disabled=false;msg.textContent='That didn\'t work just now. Try again, or: '+help});
+});
+})();
+</script>
+</body></html>

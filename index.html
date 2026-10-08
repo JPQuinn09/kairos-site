@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The Kairos mark: a line falling and levelling off, with the most recent point picked out.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=20261012"></head>
+<link rel="stylesheet" href="style.css?v=20261013"></head>
 <body>
 <div class="band hero-band">
 <div class="wrap wide">
@@ -35,7 +35,7 @@
 <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 <label class="join-opt"><input type="checkbox" name="updates"> Also send me the occasional update while it's being built</label>
 <p class="join-msg" id="join-msg" role="status" aria-live="polite"></p>
-<p class="join-fine">One email when it's out, then your address is deleted. Nothing else unless you tick the box. <a href="privacy.html#waitlist">How this is handled</a></p>
+<p class="join-fine">A confirmation now and one email when it's out, then your address is deleted. Nothing else unless you tick the box. <a href="privacy.html#waitlist">How this is handled</a></p>
 <noscript><p class="join-fine">This form needs JavaScript. You can email <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a> instead.</p></noscript>
 </form>
 <p class="cta"><a class="ghost" href="#how">How it works</a></p>
@@ -116,7 +116,7 @@ fetch(URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:KEY},
 });
 function done(updates){
 form.classList.add('done');
-say(updates?'You\'re on the list. We\'ll email you when it\'s out, and now and then before.':'You\'re on the list. One email when it\'s out, and that\'s all.');
+say(updates?'You\'re on the list. A confirmation email is on its way. We\'ll email you when it\'s out, and now and then before.':'You\'re on the list. A confirmation email is on its way, then one more when it\'s out.');
 }
 })();
 </script>

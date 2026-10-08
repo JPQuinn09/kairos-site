@@ -96,3 +96,9 @@ h2.how{margin-top:36px}
 .track>.slide:first-child{margin-left:auto}
 .track>.slide:last-child{margin-right:auto}
 @media(min-width:701px){.slide.dup{display:none}.track{justify-content:center}}
+
+/* Soft edge: the hero fades into the page instead of ending in a straight line. */
+.hero-band{position:relative}
+.hero-band::after{content:"";position:absolute;left:0;right:0;bottom:0;height:230px;background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,var(--bg) 100%);pointer-events:none;z-index:0}
+.hero-band .wrap{position:relative;z-index:1}
+@media(max-width:700px){.hero-band::after{height:170px}}

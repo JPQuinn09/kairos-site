@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The Kairos mark: a line falling and levelling off, with the most recent point picked out.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=20261011"></head>
+<link rel="stylesheet" href="style.css?v=20261012"></head>
 <body>
 <div class="band hero-band">
 <div class="wrap wide">
@@ -25,7 +25,20 @@
 <header class="hero">
 <h1>Your moment,<br>not OCD's.</h1>
 <p class="lede">A self-guided companion for exposure and response prevention. Quiz, exercises, urge log and progress, in one calm app.</p>
-<p class="cta"><span class="pill">Coming soon to iPhone</span><a class="ghost" href="#how">How it works</a></p>
+<p class="soon">Coming soon to iPhone</p>
+<form class="join" id="join" novalidate>
+<div class="join-row">
+<label class="sr" for="join-email">Email address</label>
+<input id="join-email" type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required>
+<button type="submit">Tell me when it's out</button>
+</div>
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="join-opt"><input type="checkbox" name="updates"> Also send me the occasional update while it's being built</label>
+<p class="join-msg" id="join-msg" role="status" aria-live="polite"></p>
+<p class="join-fine">One email when it's out, then your address is deleted. Nothing else unless you tick the box. <a href="privacy.html#waitlist">How this is handled</a></p>
+<noscript><p class="join-fine">This form needs JavaScript. You can email <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a> instead.</p></noscript>
+</form>
+<p class="cta"><a class="ghost" href="#how">How it works</a></p>
 </header>
 <div class="stage" aria-label="Screens from the app">
 <figure class="phone side left"><img src="img/progress.png" width="414" height="900" alt="Week, month and year charts of exercises done and urges logged"></figure>
@@ -82,4 +95,29 @@
 <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; Kairos</p>
 </footer>
 </div>
+<script>
+// Waiting list. The key below is Supabase's publishable key, the same one the
+// app ships with: it can call join_waitlist() and cannot read the list.
+(function(){
+var URL='https://rinfsydefqgzggacbksc.supabase.co/rest/v1/rpc/join_waitlist',KEY='sb_publishable_8s-21yNIAFTTwb9iOPqPbw_uM5XrwYM';
+var form=document.getElementById('join');if(!form)return;
+var msg=document.getElementById('join-msg'),btn=form.querySelector('button'),email=form.elements.email;
+function say(t,bad){msg.textContent=t;msg.classList.toggle('bad',!!bad)}
+form.addEventListener('submit',function(e){
+e.preventDefault();
+var v=email.value.trim(),updates=form.elements.updates.checked;
+// Filled only by bots: look like it worked, send nothing.
+if(form.elements.website.value){done(false);return}
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){say('That email address doesn\'t look right.',true);email.focus();return}
+btn.disabled=true;say('Adding you…');
+fetch(URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:KEY},body:JSON.stringify({p_email:v,p_updates:updates})})
+.then(function(r){if(!r.ok)throw 0;done(updates)})
+.catch(function(){btn.disabled=false;say('Couldn\'t add you just now. Try again, or email kairosocd@proton.me.',true)});
+});
+function done(updates){
+form.classList.add('done');
+say(updates?'You\'re on the list. We\'ll email you when it\'s out, and now and then before.':'You\'re on the list. One email when it\'s out, and that\'s all.');
+}
+})();
+</script>
 </body></html>

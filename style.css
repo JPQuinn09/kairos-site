@@ -37,7 +37,33 @@ nav .brand img{border-radius:7px;box-shadow:0 0 0 2px rgba(247,242,233,.9)}
 .hero{text-align:center;padding:24px 0 0}
 .hero h1{font-size:clamp(2.6rem,8vw,4.8rem);line-height:1.02;letter-spacing:-.035em;margin:0 auto 18px;color:#fff}
 .hero .lede{max-width:32em;margin:0 auto;font-size:1.15rem;color:rgba(247,242,233,.86)}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:28px 0 0}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:22px 0 0}
+/* Waiting list */
+.soon{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:600;color:#F3C9A6;margin:30px 0 12px}
+.join{max-width:520px;margin:0 auto}
+.join-row{display:flex;gap:8px;background:rgba(247,242,233,.14);border:1.5px solid rgba(247,242,233,.4);border-radius:999px;padding:6px}
+.join-row:focus-within{border-color:#F7F2E9}
+.join input[type=email]{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;padding:10px 6px 10px 18px}
+.join input[type=email]::placeholder{color:rgba(247,242,233,.6)}
+.join button{background:#E08A4B;color:#2A2620;font:inherit;font-weight:700;border:0;border-radius:999px;padding:12px 22px;cursor:pointer;white-space:nowrap}
+.join button:hover{background:#EA9A5F}
+.join button:focus-visible,.join-opt input:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.join button:disabled{opacity:.6;cursor:default}
+.join-opt{display:flex;gap:9px;align-items:flex-start;justify-content:center;text-align:left;margin:14px 0 0;font-size:.95rem;color:rgba(247,242,233,.9);cursor:pointer}
+.join-opt input{width:18px;height:18px;margin:3px 0 0;accent-color:#E08A4B;flex:none}
+.join-fine{font-size:.82rem;line-height:1.5;color:rgba(247,242,233,.72);margin:10px 0 0}
+.join-fine a{color:#F7F2E9}
+.join-msg{margin:12px 0 0;font-weight:600;color:#fff;min-height:0}
+.join-msg:empty{display:none}
+.join-msg.bad{color:#FFD9BF}
+.join.done .join-row,.join.done .join-opt,.join.done .join-fine{display:none}
+.join.done .join-msg{font-size:1.1rem;background:rgba(247,242,233,.14);border-radius:14px;padding:16px 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media(max-width:480px){
+ .join-row{flex-direction:column;border-radius:22px;padding:8px}
+ .join input[type=email]{text-align:center;padding:10px}
+}
 .pill{background:#E08A4B;color:#2A2620;font-weight:700;padding:14px 26px;border-radius:999px}
 .ghost{padding:13px 22px;border-radius:999px;border:1.5px solid rgba(247,242,233,.5);text-decoration:none;font-weight:600;color:#F7F2E9}
 .stage{display:flex;justify-content:center;align-items:flex-end;gap:clamp(8px,2.4vw,28px);margin:48px auto -150px;max-width:900px}

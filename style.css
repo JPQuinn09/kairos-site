@@ -138,10 +138,10 @@ h2.how{margin-top:36px}
 @media(prefers-color-scheme:dark){.btn{color:#1d1a15}}
 
 /* Showcase tiles: each phone sits on a soft tinted card for depth */
-:root{--t1:#DCE9DF;--t2:#F7E3D3;--t3:#EAE2F1;--t4:#DDE8EE;--t5:#E7EBD5;--t6:#F5DCD8}
-@media(prefers-color-scheme:dark){:root{--t1:#2E4435;--t2:#4A3A2D;--t3:#3C3548;--t4:#2D3F4A;--t5:#3B4430;--t6:#4A3331}}
+:root{--t1:#DCE9DF;--t2:#F7E3D3;--t3:#EAE2F1;--t4:#DDE8EE;--t5:#E7EBD5;--t6:#F5DCD8;--t7:#E1E4F2}
+@media(prefers-color-scheme:dark){:root{--t1:#2E4435;--t2:#4A3A2D;--t3:#3C3548;--t4:#2D3F4A;--t5:#3B4430;--t6:#4A3331;--t7:#343A4F}}
 .tile{padding:24px 22px 0;border-radius:30px;overflow:hidden;background:var(--tint)}
 .tile .frame{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom:0;box-shadow:0 -8px 30px rgba(42,38,32,.12)}
-.t1{--tint:var(--t1)}.t2{--tint:var(--t2)}.t3{--tint:var(--t3)}.t4{--tint:var(--t4)}.t5{--tint:var(--t5)}.t6{--tint:var(--t6)}
+.t1{--tint:var(--t1)}.t2{--tint:var(--t2)}.t3{--tint:var(--t3)}.t4{--tint:var(--t4)}.t5{--tint:var(--t5)}.t6{--tint:var(--t6)}.t7{--tint:var(--t7)}
 .slide{flex:0 0 min(300px,74vw)}
 @media(min-width:1000px){.slide{flex-basis:300px}}

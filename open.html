@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Kairos</title>
+<meta name="description" content="Continue in the Kairos app.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta name="theme-color" content="#5C8367">
+<link rel="stylesheet" href="/style.css?v=20261017"></head>
+<body><div class="wrap">
+<nav><a href="/">Kairos</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+
+<h1 id="title">Opening Kairos</h1>
+<p class="lede" id="lede">One moment. If nothing happens, tap the button below.</p>
+<p><a class="btn" id="open" href="#" style="display:inline-block;text-decoration:none" hidden>Open Kairos</a></p>
+
+<div id="help" hidden>
+<p><strong>Open this email on the phone that has Kairos installed.</strong> The link only works there, and it works best on the same phone you signed up on.</p>
+<p>Kairos isn't on the App Store yet. If you are on the waiting list, we will email you when it is out.</p>
+<p>The link is single-use and expires, so if it no longer works, go back to the app and ask for a new one.</p>
+</div>
+<noscript><p>This page needs JavaScript to open the app. Open this email on the phone that has Kairos installed and tap the button again.</p></noscript>
+
+<footer>Kairos &middot; Questions: <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a></footer>
+</div>
+<script>
+// Hands an email link over to the app. Only two destinations are allowed, and
+// only the one-time code (or an error) is passed on, so this page cannot be
+// used to send someone to an arbitrary address.
+(function () {
+  var allowed = { 'email-confirmed': 1, 'reset-password': 1 };
+  var q = new URLSearchParams(location.search);
+  // Supabase puts errors (for example an expired link) in the fragment.
+  var h = new URLSearchParams(location.hash.replace(/^#/, ''));
+  var to = q.get('to');
+  var $ = function (id) { return document.getElementById(id); };
+
+  if (!Object.prototype.hasOwnProperty.call(allowed, to)) {
+    $('title').textContent = 'This link is not valid';
+    $('lede').textContent = 'Go back to the Kairos app and ask for a new email.';
+    return;
+  }
+
+  var out = new URLSearchParams();
+  ['code', 'error', 'error_code', 'error_description'].forEach(function (k) {
+    var v = q.get(k) || h.get(k);
+    if (v) out.set(k, v);
+  });
+  var link = 'kairos://' + to + (out.toString() ? '?' + out.toString() : '');
+
+  var btn = $('open');
+  btn.href = link;
+  btn.hidden = false;
+  $('help').hidden = false;
+
+  // Only phones can open the app, so only try there. On a computer the page
+  // just explains.
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    location.href = link;
+  } else {
+    $('title').textContent = 'Open this on your phone';
+    $('lede').textContent = 'This link continues in the Kairos app, which needs to be on your phone.';
+    btn.hidden = true;
+  }
+})();
+</script>
+</body></html>

@@ -17,12 +17,12 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The Kairos mark: a line falling and levelling off, with the most recent point picked out.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=20261017"></head>
+<link rel="stylesheet" href="style.css?v=20261020"></head>
 <body>
 <div class="band hero-band">
 <div class="wrap wide">
 <nav><a href="index.html" class="brand"><img src="favicon-32.png" alt="" width="24" height="24">Kairos</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
-<header class="hero">
+<main class="hero">
 <h1>Your moment,<br>not OCD's.</h1>
 <p class="lede">A self-guided companion for exposure and response prevention. Quiz, exercises, urge log and progress, in one calm app.</p>
 <p class="soon">Coming soon to iPhone and Android</p>
@@ -39,8 +39,8 @@
 <noscript><p class="join-fine">This form needs JavaScript. You can email <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a> instead.</p></noscript>
 </form>
 <p class="cta"><a class="ghost" href="#how">How it works</a></p>
-</header>
-<div class="stage" aria-label="Screens from the app">
+</main>
+<div class="stage" role="region" aria-label="Screenshots">
 <figure class="phone side left"><img src="img/progress.png?v=20261015" width="644" height="1400" alt="Week, month and year charts of exercises done and urges logged"></figure>
 <figure class="phone main"><img src="img/home.png?v=20261015" width="644" height="1400" alt="The Kairos home screen: your progress, the next exercise, and a button to log an urge"></figure>
 <figure class="phone side right"><img src="img/urge.png?v=20261014" width="644" height="1400" alt="Logging an urge: a 0 to 10 strength scale and what set it off"></figure>
@@ -48,7 +48,7 @@
 </div>
 </div>
 
-<div class="wrap wide after-stage">
+<div class="wrap wide after-stage" role="region" aria-label="About Kairos">
 <section class="showcase" aria-label="Screens from the app">
 <h2 class="big center">See inside</h2>
 <p class="center sub">A closer look at the app.</p>
@@ -57,7 +57,7 @@
 </section>
 
 <h2 id="how" class="big center how">How it works</h2>
-<section class="steps">
+<section class="steps" aria-label="How it works">
 <div class="step"><span class="num">1</span><h3>Find your patterns</h3><p>A 36-question quiz finds which of 18 common OCD themes fit you. Most people relate to several.</p></div>
 <div class="step"><span class="num">2</span><h3>Practise on your terms</h3><p>Graded exercises for each theme, from mild to hard, or write your own. The timer keeps running while you're away.</p></div>
 <div class="step"><span class="num">3</span><h3>Log urges in the moment</h3><p>Note an urge in seconds, whether you sat with it or not, and add your own triggers.</p></div>
@@ -65,24 +65,24 @@
 </section>
 </div>
 
-<div class="band quote-band">
+<section class="band quote-band" aria-label="What Kairos will not do">
 <div class="wrap">
 <p class="eyebrow">What it won't do</p>
 <p class="quote">It won't tell you you're fine.</p>
 <p class="quote-sub">Reassurance is a compulsion, and feeding it is the opposite of what ERP is for. Kairos helps you practise sitting with not knowing instead.</p>
 </div>
-</div>
+</section>
 
-<div class="wrap wide">
+<div class="wrap wide" role="region" aria-label="Privacy and safety">
 <h2 class="big center">Private by design</h2>
-<section class="privs">
+<section class="privs" aria-label="Privacy">
 <div><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><h3>No ads. Nothing sold.</h3><p>Your records are yours, in your own account, and are never shared or sold.</p></div>
 <div><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><h3>Off unless you say so</h3><p>Crash reports and usage data are two separate switches, and both start off.</p></div>
 <div><span class="tick"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><h3>Yours to delete</h3><p>Export everything, or delete your account from inside the app.</p></div>
 </section>
 <p class="center"><a href="privacy.html">Read the full privacy policy</a></p>
 
-<section class="card safety">
+<section class="card safety" aria-label="Safety">
 <strong>Not a medical device.</strong> Kairos does not diagnose or treat OCD and is not a substitute for a qualified clinician. The exercises have not yet been reviewed by a clinician.
 <p class="crisis">In crisis? <strong>999</strong> (UK) or <strong>911</strong> (US) for emergencies. Samaritans <strong>116 123</strong> (UK, free, 24/7). <strong>988</strong> (US).</p>
 </section>
@@ -92,7 +92,7 @@
 <footer class="center">
 <img src="favicon-32.png" alt="" width="28" height="28" style="border-radius:7px">
 <p>Questions: <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a></p>
-<p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html#complaints">Complaints</a> &middot; <a href="delete-account.html">Delete your account</a></p>
+<p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html#complaints">Complaints</a> &middot; <a href="delete-account.html">Delete your account</a> &middot; <a href="accessibility.html">Accessibility</a></p>
 <p>For people aged 16 and over. Offered in [[JAMES: launch countries]]. Run by [[JAMES: legal entity name]], [[JAMES: registered address]].</p>
 </footer>
 </div>

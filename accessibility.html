@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"><meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility — Kairos</title><meta name="description" content="How accessible Kairos is today, what has and has not been tested, and how to tell us about a problem.">
+<link rel="canonical" href="https://kairosapp.co.uk/accessibility.html">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta name="theme-color" content="#5C8367">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kairos">
+<meta property="og:title" content="Accessibility — Kairos">
+<meta property="og:description" content="How accessible Kairos is today, what has and has not been tested, and how to tell us about a problem.">
+<meta property="og:url" content="https://kairosapp.co.uk/accessibility.html">
+<meta property="og:image" content="https://kairosapp.co.uk/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Kairos mark: a line falling and levelling off, with the most recent point picked out.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css?v=20261020"></head>
+<body><div class="wrap">
+<nav><a href="index.html">Kairos</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+<main>
+
+<h1>Accessibility</h1>
+<p class="updated">Last updated: 12 October 2026</p>
+
+<p class="lede">We want Kairos to work for people with disabilities, and we say plainly what has and has not been checked.</p>
+
+<h2>Our aim</h2>
+<p>We are aiming for WCAG 2.2 level AA in the app and on this website. <strong>We do not claim to meet it.</strong> Some things have been tested and pass. Others have not been tested at all, and are listed below.</p>
+
+<h2>What has been checked</h2>
+<ul>
+<li><strong>Text size.</strong> The app has been used by hand at the largest iOS text size, in light and dark appearance, on every main screen. Fifteen problems found that way were fixed, such as a crisis button cut short and numbers splitting across lines.</li>
+<li><strong>Colour contrast.</strong> Every text and button colour pair in the app is calculated against the WCAG ratios (4.5 to 1 for text, 3 to 1 for the edge of a control), in light and dark, and checked again whenever the colours change. The website's colours were checked the same way.</li>
+<li><strong>Names and roles.</strong> A check of the app's source makes sure every button, link, image and text field has a name a screen reader can announce.</li>
+<li><strong>This website.</strong> An automated check of the page structure (headings, landmarks, labels, language) found no failures.</li>
+<li><strong>Touch targets.</strong> Buttons are at least 48 points tall.</li>
+<li><strong>Calm by design.</strong> No time limits, no content that moves on its own, no streaks that can be broken, and warnings that do not repeat on every screen.</li>
+</ul>
+
+<h2>What has not been checked</h2>
+<ul>
+<li><strong>Screen readers.</strong> VoiceOver and TalkBack have not been run against the app. We have checked the markup, which is not the same as listening to it. We do not claim screen-reader compatibility.</li>
+<li><strong>Android.</strong> All testing so far has been on iPhone.</li>
+<li><strong>Disabled users.</strong> We have not yet tested with disabled people.</li>
+<li><strong>Reduced motion</strong> is respected in the code but has not been checked on a device.</li>
+<li>Text in the app stops growing at about twice the standard size. If you need larger text, use your phone's Zoom.</li>
+</ul>
+
+<h2>If something does not work for you</h2>
+<p>Email <a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a>. Tell us what you were trying to do and what got in the way; you do not need the technical term for it. We aim to reply within five working days, sooner if something is stopping you using the app at all. If a feature does not work for you, we will look for another way to give you what it does, for example by email.</p>
+
+<p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
+</main>
+<footer>Kairos · Accessibility · Last updated 12 October 2026</footer>
+</div></body></html>

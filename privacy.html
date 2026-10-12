@@ -22,7 +22,7 @@
 <nav><a href="index.html">Kairos</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 8 October 2026</p>
+<p class="updated">Last updated: 11 October 2026</p>
 
 <p class="lede">Kairos is a self-guided ERP (Exposure and Response Prevention) companion for OCD.
 What you record in it is about your own mental health, so the short version matters:
@@ -38,6 +38,12 @@ user, and never sold, shared, or used to advertise to you.</p>
 <li>You can export everything, delete your account from inside the app, and deleting the app removes the local copy.</li>
 </ul>
 </div>
+
+<h2>Who we are</h2>
+<p>Kairos is run by <strong>[[JAMES: legal entity name]]</strong>, <strong>[[JAMES: registered address]]</strong>
+(company number [[JAMES: company number]]). We are the controller of the personal data described here. ICO
+registration number: [[JAMES: ICO registration number]]. Contact:
+<a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a>.</p>
 
 <h2>What Kairos stores</h2>
 <p>Kairos records only what you enter:</p>
@@ -83,9 +89,17 @@ and are lost with the local copy. Crash reports and usage data stop when the pho
 next person is asked for their own choice.</p>
 
 <h2>Accounts and sign-in</h2>
-<p>Kairos requires an account. It is what lets your history survive a lost or replaced phone, and it is the boundary that keeps your records yours. You can sign in with an email address and password, or with Google.
+<p>Kairos requires an account. It is what lets your history survive a lost or replaced phone, and it is the boundary that keeps your records yours. You can sign in with an email address and password, with Google, or with Apple.
 If you use Google sign-in we receive only your email address and basic profile information — Google does
-not give us access to your Gmail, Drive, contacts, or anything else, and we do not request it.</p>
+not give us access to your Gmail, Drive, contacts, or anything else, and we do not request it.
+If you use Sign in with Apple we receive an account identifier and either your email address or, if you
+choose to hide it, a private relay address from Apple. Apple does not give us anything else.</p>
+<p>The first time you sign in, and again if these terms change in a way that matters, the app asks you to
+tick two boxes before it can be used: that you are 16 or over, and that you agree to Kairos storing what you
+log in your account. Neither box is ticked for you. Nothing is sent to your account until both are ticked.
+We keep a record that you ticked them, with the date and the version of the terms, because the law
+requires us to be able to show that consent was given. That record contains no health information and is
+deleted with your account.</p>
 <p>We use your email address solely to identify your account and to send account-related messages such as
 confirmation and password resets. We do not send marketing email to an account address. The
 <a href="#waitlist">waiting list</a> on this website is separate, and only for people who joined it.</p>
@@ -148,7 +162,7 @@ than a general promise to be careful.</p>
 <tr>
   <td>Quiz results, exercise logs, urge logs, exposures you write, weekly notes</td>
   <td>To show your own history back to you and sync it between your devices. No other user can read it, and we do not read it. Access to the database is limited to the person who maintains it, who would look at an account only to fix a fault you asked us to fix or where the law requires it.</td>
-  <td>Your explicit consent, given by choosing to use the app and enter it</td>
+  <td>Your explicit consent, given by ticking a separate box in the app before anything is stored in your account</td>
 </tr>
 <tr>
   <td>Crash reports</td>
@@ -164,6 +178,11 @@ than a general promise to be careful.</p>
   <td>Your email address on the waiting list</td>
   <td>To tell you the release date and when the app is out, and to send updates if you asked for them</td>
   <td>Your consent, given by submitting the form. Updates are a separate, unticked choice.</td>
+</tr>
+<tr>
+  <td>The record that you ticked the consent boxes (date, terms version, app version, phone type)</td>
+  <td>To be able to show that you gave consent, and to which version of these terms</td>
+  <td>Legal obligation: the UK GDPR requires us to be able to demonstrate consent</td>
 </tr>
 </table></div>
 <p>Crash reports and usage data are <strong>off until you switch them on</strong>, and they are two
@@ -182,7 +201,7 @@ rather than hiding them.</p>
 <tr><td><a href="https://posthog.com/privacy">PostHog</a></td><td>Usage events</td><td>That an event happened, a rounded duration, device model. No content, no location.</td><td>EU</td></tr>
 <tr><td><a href="https://resend.com/legal/privacy-policy">Resend</a></td><td>Sending account emails (confirmation, password reset) and waiting-list emails</td><td>Your email address and the message itself. None of your records.</td><td>EU (Ireland)</td></tr>
 </table></div>
-<p>If you sign in with Google, Google processes that sign-in under its own policy.</p>
+<p>If you sign in with Google or Apple, that company processes the sign-in under its own policy.</p>
 
 <h2>What we never do</h2>
 <ul>
@@ -199,8 +218,9 @@ rather than hiding them.</p>
 server, we are not told when one is shown or tapped, and we do not hold a push-notification address for
 your device. There are three kinds, and the second and third exist only if you switch them on.</p>
 <ul>
-<li><strong>Exercise in progress</strong> — shown while an exposure timer is running, so you can find
-your way back to it. It contains the title of the exercise.</li>
+<li><strong>Timer running</strong> — shown if you leave the app while an exposure timer is running, so you
+can find your way back to it. It reads “Your timer is still running”. It does not contain the title of the
+exercise.</li>
 <li><strong>Daily practice reminder</strong> — off unless you turn it on in Profile. One notification a
 day, reading “Time to practise”.</li>
 <li><strong>Check-ins through the day</strong> — off unless you add one in Profile. Up to three a day, at
@@ -220,10 +240,11 @@ any time in your phone's Settings, and the rest of the app works without it.</p>
 <p>Kairos offers optional home-screen widgets, and on iPhone a live timer on the lock screen while an
 exercise is running. If you add them, they show the number of exercises you have completed this week and
 in total, a small trend line drawn from your starting distress ratings, and — while an exercise is
-running — its title and timer.</p>
+running — a timer and the words “Timer running”. They do not show the title of the exercise.</p>
 <p>To make this possible the app copies those few figures to a shared area on your phone that the widget
 can read. They do not leave your device. They are, however, <strong>visible to anyone who can see your
-home screen or lock screen</strong>, and an exercise title can say more than you might want it to. The
+home screen or lock screen</strong>, so they are kept deliberately plain: an exercise title can say more
+than you might want a passer-by to read, so it is never put on the lock screen or in a widget. The
 widgets are entirely optional, and removing them removes the display.</p>
 
 <h2>Crisis resources</h2>
@@ -239,12 +260,38 @@ organisations anything about you, and we are not told that you tapped anything.<
 <li><strong>Access and correction</strong> — you can view and edit your entries in the app at any time.</li>
 </ul>
 <p>If you are in the UK or EU, the UK GDPR and GDPR give you rights of access, rectification, erasure,
-restriction, portability, and objection. Our lawful basis for processing is your consent, which you can
-withdraw at any time by deleting your account.</p>
+restriction, portability, and objection. Our lawful basis for each kind of data is set out in the table
+above. Where it is your consent, you can withdraw it at any time by deleting your account.</p>
+
+<h2 id="complaints">Complaints</h2>
+<p>If you are unhappy with how we have handled your data, email
+<a href="mailto:kairosocd@proton.me">kairosocd@proton.me</a>. We will acknowledge your complaint within 30
+days, look into it without undue delay, and tell you the outcome. You can also complain to the Information
+Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint">ico.org.uk/make-a-complaint</a> or on
+0303 123 1113. You do not have to complain to us first.</p>
+
+<h2>Automated safety screening</h2>
+<p>When you first use the app it asks a few yes-or-no safety questions. If an answer suggests exercises
+are not the right thing for you today, the app stops showing exercise content and shows support options
+instead. That is an automatic decision about your health information, made by the app on your phone. Your
+answers are not sent to us or stored in your account, nobody is told the answer, and you can change an
+answer at any time.</p>
+
+<h2>This website</h2>
+<p>This website has no cookies, no analytics, and loads no scripts, fonts or images from other companies. Its
+hosting provider (GitHub) receives your IP address and browser details in its server logs when you visit, as
+any web host does. If you use the waiting-list form, your email address is sent to our database provider,
+Supabase, as described in the waiting list section above. To delete an account, see
+<a href="delete-account.html">how to delete your account</a>.</p>
 
 <h2>Children</h2>
-<p>Kairos is not directed at children under 13, and we do not knowingly collect data from them. If you
-believe a child has created an account, contact us and we will delete it.</p>
+<p>Kairos is for people aged 16 or over. The app asks you to confirm this before it can be used. We do
+not knowingly collect data from anyone under 16. If you believe someone under 16 has created an account,
+contact us and we will delete it.</p>
+<p>If you are 16 or 17, you are still a child in data protection law, and we take that seriously: nothing is
+sold or used for advertising, crash reports and usage data are off unless you switch them on, and you can
+delete your account and everything in it at any time. We suggest that you do exercises with a parent, carer
+or therapist where you can.</p>
 
 <h2>Retention</h2>
 <p>Synced data is kept until you delete your account. Local data is kept until you sign out or delete the app.
@@ -264,5 +311,5 @@ It does not diagnose or treat OCD. If you are in crisis, contact emergency servi
 911 in the US — or a helpline listed in the app's Crisis Support screen.
 </div>
 
-<footer>Kairos · Privacy Policy · Last updated 8 October 2026</footer>
+<footer>Kairos · Privacy Policy · Last updated 11 October 2026</footer>
 </div></body></html>

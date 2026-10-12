@@ -145,3 +145,16 @@ h2.how{margin-top:36px}
 .t1{--tint:var(--t1)}.t2{--tint:var(--t2)}.t3{--tint:var(--t3)}.t4{--tint:var(--t4)}.t5{--tint:var(--t5)}.t6{--tint:var(--t6)}.t7{--tint:var(--t7)}
 .slide{flex:0 0 min(300px,74vw)}
 @media(min-width:1000px){.slide{flex-basis:300px}}
+
+/* Section changes ease in and out instead of cutting: each coloured band blends
+   to the page colour over ~110px at its top and bottom. */
+.quote-band{background:linear-gradient(to bottom,var(--bg) 0,#2F4A38 110px,#2F4A38 calc(100% - 110px),var(--bg) 100%);padding-top:186px;padding-bottom:186px;margin-top:0}
+.foot-band{background:linear-gradient(to bottom,var(--bg) 0,#24201B 120px);padding-top:156px;margin-top:0}
+
+/* Showcase on wider screens: a centred grid. The old centred scroller overflowed
+   on both sides, which cut the first tiles off and left them unreachable. */
+@media(min-width:701px){
+  .track{display:grid;grid-template-columns:repeat(2,minmax(0,270px));justify-content:center;gap:28px 22px;overflow:visible;max-width:1200px;margin:0 auto;padding:10px 20px 22px;scroll-snap-type:none}
+  .slide{flex:none;margin:0}
+}
+@media(min-width:1100px){.track{grid-template-columns:repeat(4,minmax(0,240px))}}
